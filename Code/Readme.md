@@ -1,33 +1,51 @@
+# Read, Generate, Modify Configurations
 
-### Desired and Current State
-
-i) Desired State: EC2 = instance_type = "t2.micro"
-
-ii) Current State: EC2 = "instance_state": "stopped" && "instance_type" = "t2.nano"
-
-Desired State == Current State
+The code mentioned in this document are used in the HashiCorp Certified Terraform Associate 2020 course.
 
 
-### Different Version Parameters
-```sh
-version    = "2.7"
-version    = ">= 2.8"
-version    = "<= 2.8"
-version    = ">=2.10,<=2.30"
-```
+# Practice-Code Mapper
 
-#### Base Configuration - provider.versioning.tf
+| Sr No | Document Link |
+| ------ | ------ |
+| 1 | [Create EC2 Instance][PlDd] |
+| 2 | [Create DigitalOcean Droplet  ][PlDe] |
+| 3 | [Provider Versioning][PlDt] |
+| 4 | [Attributes and Output Values in Terraform][PlDa] |
+| 5 | [Referencing Cross-Account Resource Attributes][PlDb] |
+| 6 | [Terraform Variables][PlDc] |
+| 7 | [Count and Count Index][PlDf] |
+| 8 | [Conditional Expressions][PlDg] |
+| 9 | [Local Values][PlDh] |
+| 10 | [Terraform Functions][PlDi] |
+| 11 | [Data Sources][PlDj] |
+| 12 | [Debugging In Terraform][PlDk] |
+| 13 | [Terraform Format][PlDl] |
+| 14 | [Terraform Validate][PlDm] |
+| 15 | [Load Order and Semantics][PlDn] |
+| 16 | [Dynamic Blocks][PlDo] |
+| 17 | [Tainting Resources][PlDp] |
+| 18 | [Splat Expression][PlDq] |
+| 19 | [Terraform Graph][PlDr] |
+| 20 | [Saving Terraform Plan to File][PlDs] |
+ 
+[PlDa]: <attributes and output values/Readme.md>
+[PlDb]: <referencing cross-account>
+[PlDc]: <variables>
+[PlDd]: <Create EC2 Instance>
+[PlDe]: <Create DO Droplet>
+[PlDf]: <Count and Count Index>
+[PlDg]: <conditional expressions>
+[PlDh]: <local values>
+[PlDi]: <functions>
+[PlDj]: <data sources>
+[PlDk]: <debugging>
+[PlDl]: <format>
+[PlDm]: <validate>
+[PlDn]: <load order>
+[PlDo]: <dynamic blocks>
+[PlDp]: <tainting resources>
+[PlDq]: <splat expressions>
+[PlDr]: <graph>
+[PlDs]: <plan>
+[PlDt]: <provider versioning>
 
-```sh
-provider "aws" {
-  region     = "us-west-2"
-  access_key = "YOUR-ACCESS-KEY"
-  secret_key = "YOUR-SECRET-KEY"
-  version    = ">=2.10,<=2.30"
-}
-
-resource "aws_instance" "myec2" {
-   ami = "ami-082b5a644766e0e6f"
-   instance_type = "t2.micro"
-}
-```

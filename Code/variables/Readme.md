@@ -90,8 +90,6 @@ echo $TF_VAR
 
 ## DATA TYPE for variables
 
-## This snippet is from the Data Types for Variable video.
-
 ### ec2_datatype.tf
 
 ```sh
