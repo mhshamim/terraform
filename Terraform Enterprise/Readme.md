@@ -17,6 +17,8 @@ Note: Sentinel policies are paid feature
 
 **EXAMPLE:** Input validation depending on the name of the key.
 
+**`sentinel-policy.tf`**
+
 ```sh
 import "tfplan"
 
@@ -46,3 +48,8 @@ When using full remote operations, operations like terraform plan or terraform a
 Remote plans and applies use variable values from the associated Terraform Cloud workspace.
 
 Terraform Cloud can also be used with local operations, in which case only state is stored in the Terraform Cloud backend.
+
+
+> **[Remote Backend Code][df1]**
+
+[df1]: <remote-backend.md>
